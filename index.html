@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>shop-vue</title>
+      <script>
+        // 页面适配代码，确保 1rem === 10px
+        (function() {
+          var html = document.documentElement
+    
+          function resetFontSizeOfRootElement() {
+            var baseFontSize = 0.625;
+            var ratio = (375 / html.offsetWidth);
+    
+            html.style.fontSize = (baseFontSize / ratio) * 100 + '%'
+            window.FONT_PX = (baseFontSize / ratio)
+            window.PIXEL_RATIO = ratio
+          }
+    
+          resetFontSizeOfRootElement()
+          window.addEventListener('resize', resetFontSizeOfRootElement)
+          document.addEventListener('resize', resetFontSizeOfRootElement)
+        }())
+      </script>
+      <style type="text/css">
+      	p {
+      	  margin: 0;
+      	  padding: 0;
+      	}
+      </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
